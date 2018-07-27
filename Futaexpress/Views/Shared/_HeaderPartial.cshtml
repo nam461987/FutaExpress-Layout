@@ -1,0 +1,86 @@
+﻿<section id="top-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/Content/images/private/logo.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="head-social">
+                    <ul>
+                        <li>
+                            <a href="/" class="facebook-i"></a>
+                        </li>
+                        <li>
+                            <a href="/" class="twitter-i"></a>
+                        </li>
+                        <li>
+                            <a href="/" class="google-i"></a>
+                        </li>
+                        <li>
+                            <a href="/" class="youtube-i"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="head-info">
+                    <div class="col-md-4 col-xs-4 head-hotline">
+                        <h4>1900 6767</h4>
+                        <p>Hỗ trợ 24/7</p>
+                    </div>
+                    <div class="col-md-4 col-xs-4 head-address">
+                        <h4>335 LHP, Q10</h4>
+                        <p>TP. Hồ Chí Minh</p>
+                    </div>
+                    <div class="col-md-4 col-xs-4 head-worktime">
+                        <h4>6:00 - 23:00</h4>
+                        <p>Cả CN và Lễ, Tết</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Trang chủ</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Giới thiệu</a></li>
+                <li>
+                    <a href="@Url.RouteUrl("Branch")">Hệ thống chi nhánh</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dịch vụ <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Tin tức</a></li>
+                <li><a href="#contact">Tuyển dụng</a></li>
+                <li><a href="@Url.RouteUrl("Contact")">Liên hệ</a></li>
+                
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>@DateTime.Now.ToString("ddd, dd/MM/yyyy")</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>

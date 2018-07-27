@@ -1,0 +1,52 @@
+﻿<div class="col-md-3 affix-sidebar">
+    <div class="sidebar-nav">
+        <div class="navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                    <span class="sr-only">Customer</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="visible-xs navbar-brand">Danh mục</span>
+            </div>
+            <div class="navbar-collapse collapse sidebar-navbar-collapse">
+                <ul class="nav navbar-nav" id="sidenav01">
+                    <li>
+                        <a href="javascript:;" class="customer-ico">
+                            Customer
+                        </a>
+                        <small>Quản lý tài khoản</small>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#toggleDemo" data-parent="#sidenav01" class="collapsed dondathang-ico">
+                            Đơn đặt hàng
+                        </a>
+                        <div class="collapse" id="toggleDemo" style="height: 0px;">
+                            <ul class="nav nav-list">
+                                <li><a href="@Url.RouteUrl("Bill_History")">Lịch sử giao nhận</a></li>
+                                <li><a href="@Url.RouteUrl("Bill_Check")">Kiểm tra đơn hàng</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#toggleDemo2" data-parent="#sidenav01" class="collapsed nhanxet-ico">
+                            Nhận xét
+                        </a>
+                        <div class="collapse" id="toggleDemo2" style="height: 0px;">
+                            <ul class="nav nav-list">
+                                <li><a href="javascript:;">Lịch sử giao nhận</a></li>
+                                <li><a href="javascript:;">Kiểm tra đơn hàng</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="javascript:;" class="huydonhang-ico">Hủy đơn hàng</a></li>
+                    <li><a href="javascript:;" class="phuongthucthanhtoan-ico">Phương thức thanh toán <span class="badge pull-right">42</span></a></li>
+                    <li><a href="javascript:;" class="thongtincanhan-ico">Thông tin cá nhân</a></li>
+                    <li><a href="javascript:;" class="sodiachi-ico">Sổ địa chỉ</a></li>
+                    <li><a href="javascript:;" class="magiamgia-ico">Mã giảm giá</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>

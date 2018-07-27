@@ -1,0 +1,2166 @@
+﻿/*! 
+ *   componets
+ *   1/ #top-header
+ *   2/ navbar-custom
+ *   3/ body-top
+ *   4/ express-button
+ *   5/ user-interface
+ *   6/ about-us
+ *   7/ choose-us
+ *   8/ services
+ *   9/ news-list
+ *   10/ hotline-banner
+ *   11/ customer-part
+ *   12/ footer
+ *   13/ page-regis
+ *   14/ bill-create
+ *   15/ affix-sidebar
+ *   16/ Bill-history
+ *   17/ Bill-check
+ *   18/ branch-page
+ ***************
+ *   Contact Page 
+ ***************
+ * App Landing Page
+ */
+
+/* Component */
+a:hover, a:active {
+    text-decoration: none;
+}
+
+.basicbtn {
+    margin: 10px 0;
+    padding: 7px 20px;
+    border: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn-main1:active, .btn-main1:focus, .btn-main1:hover, .btn-main1:visited {
+    background: #fff;
+    color: #ef5222;
+    outline: 1px solid #ef5222;
+}
+
+.btn-main1 {
+    background: #ef5222;
+    color: #fff;
+}
+
+.btn-main2:active, .btn-main2:focus, .btn-main2:hover, .btn-main2:visited {
+    background: #fff;
+    color: #006c3b;
+    outline: 1px solid #006c3b;
+}
+
+.btn-main2 {
+    background: #006c3b;
+    color: #fff;
+}
+
+.text-main1 {
+    color: #ef5222;
+}
+
+.text-main2 {
+    color: #006c3b;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.underline-main1 {
+    border-bottom: 1px solid #ef5222;
+}
+
+.underline-main2 {
+    border-bottom: 1px solid #006c3b;
+}
+
+h3.middle-line {
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+    h3.middle-line span {
+        display: inline-block;
+        vertical-align: baseline;
+        zoom: 1;
+        position: relative;
+        padding: 0 20px;
+    }
+
+        h3.middle-line span:before {
+            right: 100%;
+        }
+
+        h3.middle-line span:before, h3.middle-line span:after {
+            content: '';
+            display: block;
+            width: 25px;
+            position: absolute;
+            top: 12px;
+            border-top: 1px solid red;
+        }
+
+        h3.middle-line span:after {
+            left: 100%;
+        }
+
+.bs-caret {
+    color: #ef5222;
+}
+
+.bootstrap-select .dropdown-toggle:focus {
+    outline: 1px solid transparent !important;
+}
+
+@media (max-width:736px) {
+    .navbar-nav .dropdown-menu > li > a {
+        color: #fff;
+    }
+}
+
+textarea {
+    resize: vertical; /* user can resize vertically, but width is fixed */
+}
+
+.radio {
+    padding-left: 20px;
+}
+
+    .radio label {
+        display: inline-block;
+        position: relative;
+        padding-left: 5px;
+    }
+
+        .radio label::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            left: 0;
+            margin-left: -20px;
+            border: 1px solid #cccccc;
+            border-radius: 50%;
+            background-color: #fff;
+            -webkit-transition: border 0.15s ease-in-out;
+            -o-transition: border 0.15s ease-in-out;
+            transition: border 0.15s ease-in-out;
+        }
+
+        .radio label::after {
+            display: inline-block;
+            position: absolute;
+            content: " ";
+            width: 11px;
+            height: 11px;
+            left: 3px;
+            top: 3px;
+            margin-left: -20px;
+            border-radius: 50%;
+            background-color: #555555;
+            -webkit-transform: scale(0, 0);
+            -ms-transform: scale(0, 0);
+            -o-transform: scale(0, 0);
+            transform: scale(0, 0);
+            -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+            -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+            -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+            transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+        }
+
+    .radio input[type="radio"] {
+        opacity: 0;
+    }
+
+        .radio input[type="radio"]:focus + label::before {
+            outline: thin dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
+        }
+
+        .radio input[type="radio"]:checked + label::after {
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -o-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+
+        .radio input[type="radio"]:disabled + label {
+            opacity: 0.65;
+        }
+
+            .radio input[type="radio"]:disabled + label::before {
+                cursor: not-allowed;
+            }
+
+    .radio.radio-inline {
+        margin-top: 0;
+    }
+
+/* #top-header */
+#top-header {
+    margin-bottom: 30px;
+}
+
+    #top-header .logo {
+        padding-top: 12px;
+    }
+
+        #top-header .logo img {
+            max-height: 75px;
+        }
+
+.head-social {
+    text-align: right;
+    padding: 5px 0;
+}
+
+    .head-social ul {
+        margin: 0;
+    }
+
+        .head-social ul li {
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+            .head-social ul li a {
+                padding: 5px 14px;
+            }
+
+.facebook-i {
+    background: url(/Content/images/private/ic_header.face.png) no-repeat center;
+}
+
+    .facebook-i:hover {
+        background: url(/Content/images/private/ic_header.face.over.png) no-repeat center;
+    }
+
+.twitter-i {
+    background: url(/Content/images/private/ic_header.twitter.png) no-repeat center;
+}
+
+    .twitter-i:hover {
+        background: url(/Content/images/private/ic_header.twitter.over.png) no-repeat center;
+    }
+
+.google-i {
+    background: url(/Content/images/private/ic_header.google.png) no-repeat center;
+}
+
+    .google-i:hover {
+        background: url(/Content/images/private/ic_header.google.over.png) no-repeat center;
+    }
+
+.youtube-i {
+    background: url(/Content/images/private/ic_header.youtube.png) no-repeat center;
+}
+
+    .youtube-i:hover {
+        background: url(/Content/images/private/ic_header.youtube.over.png) no-repeat center;
+    }
+
+.head-info {
+    padding-top: 20px;
+    border-top: 1px solid #e6e6e6;
+}
+
+    .head-info div {
+        padding-left: 40px;
+        line-height: 20px;
+    }
+
+    .head-info h4 {
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0;
+        line-height: 25px;
+    }
+
+    .head-info p {
+        color: #808080;
+        font-size: 12px;
+        margin: 0;
+        line-height: 12px;
+    }
+
+.head-hotline {
+    background: url(/Content/images/private/ic_header.phone.png) no-repeat left center;
+}
+
+.head-address {
+    background: url(/Content/images/private/ic_header.adress.png) no-repeat left center;
+}
+
+.head-worktime {
+    background: url(/Content/images/private/ic_header.time.png) no-repeat left center;
+}
+
+@media (max-width:414px) {
+    .head-info div {
+        background-size: contain;
+        padding-left: 35px;
+    }
+
+    .head-info h4 {
+        font-size: 10px;
+        line-height: 19px;
+    }
+
+    .head-info p {
+        font-size: 8px;
+        line-height: 11px;
+    }
+}
+/* navbar-custom */
+.navbar-custom {
+    background: #ef5222;
+}
+
+    .navbar-custom a {
+        color: #fff;
+    }
+
+    .navbar-custom .nav > li > a:hover, .navbar-custom .nav > li > a:focus {
+        background-color: transparent;
+        color: #ececec;
+    }
+
+.navbar-toggle {
+    border: 1px solid #fff;
+}
+
+    .navbar-toggle .icon-bar {
+        background: #fff;
+    }
+
+/* body-top */
+#body-top {
+    margin-bottom: 15px;
+}
+
+.login-block {
+    text-align: center;
+    border: 1px solid #ececec;
+    padding: 20px 10px;
+}
+
+    .login-block h3 {
+        color: #ef5222;
+        margin: 10px 0 30px;
+    }
+
+    .login-block a {
+        padding-bottom: 3px;
+    }
+
+        .login-block a:hover, .login-block a:focus {
+            text-decoration: none;
+            color: inherit;
+        }
+
+@media (max-width:768px) {
+    .login-block a {
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+}
+
+.input-group .icon-addon .form-control {
+    border-radius: 0;
+}
+
+.input-group-addon:first-child {
+    border-radius: 0;
+    background: #ef5222;
+    color: #fff;
+}
+
+.icon-addon.addon-lg .form-control {
+    line-height: 1.33;
+    height: 46px;
+    font-size: 14px;
+    padding: 10px 16px;
+}
+
+.form-control:focus {
+    border-color: #ef5222;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(239, 82, 34, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(239, 82, 34, 0.6);
+}
+
+/* express-button */
+#express-button .create-btn {
+    padding: 25px 0 25px 40px;
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+}
+
+    #express-button .create-btn a {
+        color: #fff;
+    }
+
+.byweb-ico {
+    background: #ef5222 url(/Content/images/private/home/ic_order.png) no-repeat left 20px center;
+}
+
+.byapp-ico {
+    background: #006c3b url(/Content/images/private/home/ic_orderapp.png) no-repeat left 20px center;
+}
+
+@media(max-width:768px) {
+    #express-button .create-btn {
+        font-size: 15px;
+    }
+
+    .byweb-ico {
+        background: #ef5222 url(/Content/images/private/home/ic_order.png) no-repeat left 5px center;
+        background-size: 30px;
+    }
+
+    .byapp-ico {
+        background: #006c3b url(/Content/images/private/home/ic_orderapp.png) no-repeat left 5px center;
+        background-size: 30px;
+    }
+}
+
+@media (max-width:414px) {
+    #express-button .create-btn {
+        padding: 15px 0 15px 15px;
+        font-size: 7px;
+    }
+
+    .byweb-ico {
+        background: #ef5222 url(/Content/images/private/home/ic_order.png) no-repeat left 5px center;
+        background-size: 20px;
+    }
+
+    .byapp-ico {
+        background: #006c3b url(/Content/images/private/home/ic_orderapp.png) no-repeat left 5px center;
+        background-size: 20px;
+    }
+}
+
+/* user-interface */
+#user-interface h4 {
+    padding-left: 35px;
+}
+
+.bill-find-ico {
+    background: url(/Content/images/private/home/ic_searchorder.png) no-repeat left center;
+    background-size: contain;
+}
+
+.price-table-ico {
+    background: url(/Content/images/private/home/ic_bill.png) no-repeat left center;
+    background-size: contain;
+}
+
+.online-pay-ico {
+    background: url(/Content/images/private/home/ic_cash.png) no-repeat left center;
+    background-size: contain;
+}
+
+.branch-ico {
+    background: url(/Content/images/private/home/ic_list.png) no-repeat left center;
+    background-size: contain;
+}
+
+.fee-cal-ico {
+    background: url(/Content/images/private/home/ic_postage.png) no-repeat left center;
+    background-size: contain;
+}
+
+.bill-find {
+    padding: 20px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+    .bill-find .input-group {
+        margin: 0 40px;
+    }
+
+.icon-addon.addon-lg .btn {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 0;
+    background: #ef5222;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+    .icon-addon.addon-lg .btn:hover, .icon-addon.addon-lg .btn:active {
+        background: #ec4916;
+    }
+
+.price-table {
+    padding: 20px 0;
+    background: url(/Content/images/private/home/right.png) no-repeat right center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+    .price-table h4 {
+        display: inline-block;
+    }
+
+    .price-table span {
+        color: #ef5222;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+.online-pay {
+    padding: 20px 0;
+    background: url(/Content/images/private/home/right.png) no-repeat right center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+    .online-pay p {
+        font-size: 10px;
+    }
+
+.branch-list {
+    padding: 20px 0;
+    background: url(/Content/images/private/home/map_vietnam.png) no-repeat right center;
+}
+
+    .branch-list h3 {
+        margin-left: 20px;
+        padding-left: 30px;
+        font-size: 18px;
+        color: #9c9c9c;
+        text-decoration: underline;
+        background: url(/Content/images/private/home/ic_list.truckfast.png) no-repeat left center;
+    }
+
+.fee-cal {
+    padding: 20px 0;
+}
+
+    .fee-cal .form-horizontal {
+        padding-left: 30px;
+    }
+
+        .fee-cal .form-horizontal .form-group {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .fee-cal .form-horizontal .control-label {
+            text-align: left;
+            padding-left: 25px;
+        }
+
+    .fee-cal p {
+        font-size: 12px;
+        font-style: italic;
+    }
+
+.noinhanhang-ico {
+    background: url(/Content/images/private/home/ic_postage.go.png) no-repeat left center;
+}
+
+.noigiaohang-ico {
+    background: url(/Content/images/private/home/ic_postage.to.png) no-repeat left center;
+}
+
+.loaihinhdichvu-ico {
+    background: url(/Content/images/private/home/ic_postage.truck.png) no-repeat left center;
+}
+
+.loaihanghoa-ico {
+    background: url(/Content/images/private/home/ic_postage.glass.png) no-repeat left center;
+}
+
+.khoiluong-ico {
+    background: url(/Content/images/private/home/ic_postage.weight.png) no-repeat left center;
+}
+
+.kichthuoc-ico {
+    background: url(/Content/images/private/home/ic_postage.size.png) no-repeat left center;
+}
+
+/* about-us */
+#about-us {
+    margin-bottom: 30px;
+}
+
+.about-us-description {
+    padding: 0 50px;
+    text-align: center;
+}
+
+@media (max-width:414px) {
+    #about-us {
+        padding: 0;
+    }
+
+    .about-us-description {
+        padding: 0 20px;
+    }
+}
+/* choose-us */
+#choose-us {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+    #choose-us .container {
+        background: #ccc url(/Content/images/private/home/6.jpg) no-repeat left center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #choose-us .row {
+        background: #0000008a;
+        padding-bottom: 20px;
+    }
+
+.choose-us-description {
+    padding: 30px 70px 20px;
+}
+
+    .choose-us-description h3.middle-line:before {
+        width: 33%;
+    }
+
+    .choose-us-description p, .choose-us-description h4 {
+        color: #fff;
+    }
+
+    .choose-us-description h4 {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+.reason-list {
+    padding-left: 50%;
+    text-align: left;
+    background: url(/Content/images/private/home/img_reason.cart.png) no-repeat left 15px center;
+    background-size: contain;
+}
+
+    .reason-list > div {
+        padding: 5px 0 5px 70px;
+        position: relative;
+    }
+
+    .reason-list h4 {
+        padding-left: 15px;
+        background: url(/Content/images/private/home/ic_reason...png) no-repeat left center;
+        font-size: 16px;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+    }
+
+    .reason-list p {
+        font-size: 12px;
+        color: #fff;
+        line-height: 18px;
+    }
+
+.combine-line {
+    border-left: 1px dashed #868080;
+    height: 25px;
+    position: absolute;
+    left: 25px;
+    bottom: -14px;
+}
+
+.hailong-ico {
+    background: url(/Content/images/private/home/ic_reason.smile.png) no-repeat left center;
+}
+
+.phaichang-ico {
+    background: url(/Content/images/private/home/ic_reason.save.png) no-repeat left center;
+}
+
+.phanphoi-ico {
+    background: url(/Content/images/private/home/ic_reason.map.png) no-repeat left center;
+}
+
+.phuongtien-ico {
+    background: url(/Content/images/private/home/ic_reason.truck.png) no-repeat left center;
+}
+
+@media (max-width:768px) {
+    .reason-list {
+        background-size: 44%;
+    }
+}
+
+@media (max-width:414px) {
+    .reason-list {
+        padding-left: 0;
+        background: none;
+    }
+
+    .choose-us-description {
+        padding: 30px 20px 10px;
+    }
+}
+
+/* services */
+#services {
+    margin-bottom: 30px;
+}
+
+.service-list {
+    background: url(/Content/images/private/home/img_service.package.png) no-repeat center bottom;
+    padding: 55px 0 0;
+    margin-top: 20px;
+}
+
+    .service-list div:first-child > div {
+        padding-right: 80px;
+        text-align: right;
+        margin-bottom: 25px;
+    }
+
+        .service-list div:first-child > div:last-child, .service-list div:nth-child(2) > div:last-child {
+            margin-bottom: 0;
+        }
+
+    .service-list div:nth-child(2) > div {
+        padding-left: 80px;
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    .service-list h5 {
+        color: #ef5222;
+        margin: 0;
+        line-height: 20px;
+        padding-top: 15px;
+    }
+
+    .service-list a {
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        display: inline-block;
+        padding-bottom: 15px;
+    }
+
+.hoatoc-ico {
+    background: url(/Content/images/private/home/ic_service.truckfast.png) no-repeat right center;
+}
+
+.hanghoa-ico {
+    background: url(/Content/images/private/home/ic_service.oderhight.png) no-repeat left center;
+}
+
+.chuyennhanh-ico {
+    background: url(/Content/images/private/home/ic_service.trucktime.png) no-repeat right center;
+}
+
+.chuyentietkiem-ico {
+    background: url(/Content/images/private/home/ic_service.save.png) no-repeat right center;
+}
+
+.thanhtoansau-ico {
+    background: url(/Content/images/private/home/ic_service.cash.png) no-repeat left center;
+}
+
+.thanhtoannhan-ico {
+    background: url(/Content/images/private/home/ic_service.order.png) no-repeat left center;
+}
+
+@media (max-width:768px) {
+    .service-list {
+        background: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+        .service-list > .col-md-4 {
+            width: 50%;
+            float: left;
+        }
+}
+
+@media (max-width:414px) {
+    .service-list {
+        background: none;
+        padding: 0;
+    }
+
+        .service-list div:first-child > div {
+            padding-left: 80px;
+            text-align: left;
+        }
+
+    .chuyennhanh-ico {
+        background: url(/Content/images/private/home/ic_service.trucktime.png) no-repeat left center;
+    }
+
+    .chuyentietkiem-ico {
+        background: url(/Content/images/private/home/ic_service.save.png) no-repeat left center;
+    }
+
+    .hoatoc-ico {
+        background: url(/Content/images/private/home/ic_service.truckfast.png) no-repeat left center;
+    }
+
+    .service-list div:first-child > div:last-child {
+        margin-bottom: 30px;
+    }
+}
+
+/* news-list */
+#news-list {
+    padding: 30px 0;
+}
+
+    #news-list .custom-nav {
+        width: 16px;
+        height: 30px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    #news-list .owl-nav {
+        text-align: center;
+    }
+
+        #news-list .owl-nav > div {
+            display: inline-block;
+        }
+
+    #news-list .pre-carousel {
+        background: url(/Content/images/private/home/left.png) no-repeat center center;
+        margin-right: 3px;
+    }
+
+        #news-list .pre-carousel:hover, #news-list .pre-carousel:active {
+            background: url(/Content/images/private/home/left.over.png) no-repeat center center;
+            margin-right: 3px;
+        }
+
+    #news-list .next-carousel {
+        background: url(/Content/images/private/home/right.png) no-repeat center center;
+        margin-left: 3px;
+    }
+
+        #news-list .next-carousel:hover, #news-list .next-carousel:active {
+            background: url(/Content/images/private/home/right.over.png) no-repeat center center;
+            margin-left: 3px;
+        }
+
+.news-entry h4 {
+    font-size: 16px;
+    position: relative;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+
+    .news-entry h4:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #ef5222;
+        height: 2px;
+        width: 40px;
+    }
+
+.news-entry img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.news-entry p {
+    font-size: 12px;
+    background: url(/Content/images/private/home/ic_new..png)no-repeat left top;
+    padding-top: 10px;
+}
+
+.news-entry a {
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media(max-width:414px) {
+    #news-list {
+        padding: 30px 20px;
+    }
+}
+/* hotline-banner */
+#hotline-banner {
+    margin-bottom: 30px;
+}
+
+    #hotline-banner img {
+        max-width: 100%;
+    }
+/* customer-part */
+#customer-part {
+    background-color: #006c3b;
+    background-image: -webkit-linear-gradient(0deg, #006c3b 50%, #ef5222 50%);
+}
+
+    #customer-part .row > div {
+        width: 50%;
+        float: left;
+        padding: 30px 0;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #customer-part .send-feedback {
+        background: url(/Content/images/private/ic_footer.feedback.png)no-repeat left center;
+    }
+
+    #customer-part .questions {
+        background: url(/Content/images/private/ic_footerquestion.png)no-repeat right center;
+        position: relative;
+    }
+
+        #customer-part .questions:before {
+            content: "";
+            position: absolute;
+            left: -1px;
+            top: 12px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 30px 0 30px 18px;
+            border-color: transparent transparent transparent #006c3b;
+        }
+
+@media(max-width:414px) {
+    #customer-part .row > div {
+        padding: 20px 0;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        background: none;
+    }
+
+    #customer-part .questions:before {
+        top: 0px;
+        border-width: 28px 0 30px 18px;
+    }
+}
+
+/* footer */
+footer {
+    background: url(/Content/images/private/home/3.jpg)no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.footer-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 0 20px;
+}
+
+    .footer-content h4 {
+        color: #ef5222;
+        padding-bottom: 10px;
+        border-bottom: 0.5px solid #ccc;
+        position: relative;
+    }
+
+        .footer-content h4.none, .footer-content h4.none:before {
+            border: none;
+            padding-bottom: 0;
+        }
+
+        .footer-content h4:before {
+            content: "";
+            position: absolute;
+            width: 55px;
+            border: 0.5px solid #ef5222;
+            bottom: -0.5px;
+            left: 0;
+            z-index: 9999;
+        }
+
+    .footer-content h3 {
+        color: #fff;
+        font-size: 50px;
+        margin-top: 0;
+        padding-bottom: 10px;
+        border-bottom: 0.5px solid #ccc;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+        .footer-content h3:before {
+            content: "";
+            position: absolute;
+            width: 55px;
+            border: 0.5px solid #ef5222;
+            bottom: -0.5px;
+            left: 0;
+            z-index: 9999;
+        }
+
+    .footer-content .icon-addon.addon-lg .form-control {
+        background: #cccccc36;
+        border-radius: 0;
+        color: #fff;
+        font-size: 10px;
+        border: 1px solid #868686;
+    }
+
+    .footer-content .icon-addon.addon-lg {
+        margin-bottom: 10px;
+    }
+
+    .footer-content .checkbox-inline {
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .footer-content input[type="checkbox"] {
+        margin-top: 2px;
+    }
+
+.footer-social {
+    text-align: left;
+    padding: 5px 0;
+}
+
+    .footer-social ul {
+        margin: 0;
+        padding-left: 0;
+    }
+
+        .footer-social ul li {
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+            .footer-social ul li a {
+                height: 37px;
+                width: 37px;
+                display: inline-block;
+            }
+
+.ft-facebook-i {
+    background: url(/Content/images/private/ic_footer.face.png) no-repeat center;
+}
+
+    .ft-facebook-i:hover {
+        background: url(/Content/images/private/ic_footer.face.over.png) no-repeat center;
+    }
+
+.ft-twitter-i {
+    background: url(/Content/images/private/ic_footer.twitter.png) no-repeat center;
+}
+
+    .ft-twitter-i:hover {
+        background: url(/Content/images/private/ic_footer.twitter.over.png) no-repeat center;
+    }
+
+.ft-google-i {
+    background: url(/Content/images/private/ic_footer.google.png) no-repeat center;
+}
+
+    .ft-google-i:hover {
+        background: url(/Content/images/private/ic_footer.google.over.png) no-repeat center;
+    }
+
+.ft-youtube-i {
+    background: url(/Content/images/private/ic_footer.youtube.png) no-repeat center;
+}
+
+    .ft-youtube-i:hover {
+        background: url(/Content/images/private/ic_footer.youtube.over.png) no-repeat center;
+    }
+
+.other-page-link {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .other-page-link li {
+        margin-bottom: 8px;
+    }
+
+        .other-page-link li a {
+            font-size: 12px;
+            color: #a9a7a7;
+            padding-left: 15px;
+            position: relative;
+            line-height: 13px;
+        }
+
+            .other-page-link li a:hover {
+                color: #ef5222;
+            }
+
+            .other-page-link li a:before {
+                content: "\00BB";
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+.ft-sumenh img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.ft-sumenh p, .ft-sumenh a {
+    color: #a9a7a7;
+    text-align: justify;
+}
+
+.bottom-footer {
+    text-align: center;
+    background: #ef5222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+    .bottom-footer a {
+        color: #fff;
+    }
+
+/* Contact Page */
+.contact-banner {
+    margin-top: -20px;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+    .contact-banner img {
+        max-width: 100%;
+    }
+
+#maps {
+    width: 100%;
+}
+
+    #maps iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+    }
+
+.contact-part h3 {
+    padding-left: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.contact-part .contact-informations h3 {
+    background: url(/Content/images/private/Contact/ic_address1.png) no-repeat left center;
+}
+
+.contact-part .contact-form h3 {
+    background: url(/Content/images/private/Contact/ic_question.png) no-repeat left center;
+}
+
+.contact-informations p {
+    color: #ef5222;
+    padding-left: 35px;
+    line-height: 30px;
+}
+
+.contact-informations .address {
+    background: url(/Content/images/private/Contact/ic_address2.png) no-repeat left 5px center;
+}
+
+.contact-informations .phone {
+    background: url(/Content/images/private/Contact/ic_phone.png) no-repeat left 5px center;
+}
+
+.contact-informations .mail {
+    background: url(/Content/images/private/Contact/ic_mail.png) no-repeat left 5px center;
+}
+
+.contact-informations .website {
+    background: url(/Content/images/private/Contact/ic_web.png) no-repeat left 5px center;
+}
+
+.connect-via-social {
+    border-top: 1px solid #f8f8f8;
+    padding-top: 10px;
+}
+
+    .connect-via-social p {
+        color: #333;
+        padding-left: 0;
+    }
+
+@media(max-width:736px) {
+    #maps iframe {
+        height: 150px;
+    }
+}
+
+/* App Landin Page */
+#app-banner {
+    margin-top: -20px;
+    background: #f8f8f8;
+}
+
+    #app-banner .container {
+        background: url(/Content/images/private/App-taodonhang/1.png) no-repeat right 130px center;
+        padding: 50px 15px 70px;
+    }
+
+    #app-banner .description h1 {
+        color: #ef5222;
+        text-transform: uppercase;
+        font-size: 26px;
+        line-height: 50px;
+        font-weight: bold;
+    }
+
+    #app-banner .description p {
+        color: #006c3b;
+    }
+
+    #app-banner .description {
+        text-align: center;
+    }
+
+    #app-banner .download-button {
+        margin-top: 20px;
+    }
+
+        #app-banner .download-button a:first-child {
+            margin-right: 10px;
+        }
+
+        #app-banner .download-button img {
+            max-width: 100%;
+        }
+
+#app-feature .container {
+    padding: 80px 0;
+    background: url(/Content/images/private/App-taodonhang/2.png) no-repeat left 60px center;
+}
+
+#app-feature h4 {
+    padding-left: 60px;
+    line-height: 50px;
+    margin: 40px 0;
+    text-transform: uppercase;
+    font-size: 28px;
+    color: #868383;
+}
+
+.gddongian-ico {
+    background: url(/Content/images/private/App-taodonhang/ic_phone1.png) no-repeat left center;
+}
+
+.desudung-ico {
+    background: url(/Content/images/private/App-taodonhang/ic_phone2.png) no-repeat left center;
+}
+
+.tienquanly-ico {
+    background: url(/Content/images/private/App-taodonhang/ic_phone3.png) no-repeat left center;
+}
+
+.donhangnhanhgon-ico {
+    background: url(/Content/images/private/App-taodonhang/ic_order.png) no-repeat left center;
+}
+
+.trangthaicapnhat-ico {
+    background: url(/Content/images/private/App-taodonhang/ic_update.png) no-repeat left center;
+}
+
+.thanhtoandedang-ico {
+    background: url(/Content/images/private/App-taodonhang/Ic_cash.png) no-repeat left center;
+}
+
+#more-app-feature .row {
+    padding: 100px 0 166px 50px;
+    background: #006c3b url(/Content/images/private/App-taodonhang/3.png) no-repeat right 15px top 20px;
+    position: relative;
+}
+
+#more-app-feature h4 {
+    padding-left: 60px;
+    line-height: 40px;
+    margin: 40px 0;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #fff;
+}
+
+.android-btn {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+    .android-btn img, .ios-btn img {
+        width: 100%;
+    }
+
+.ios-btn {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.example-interface {
+    padding: 50px 0;
+    text-align: center;
+}
+
+    .example-interface img {
+        max-width: 100%;
+    }
+
+@media (max-width:768px) {
+    #app-banner .container {
+        background: url(/Content/images/private/App-taodonhang/1.png) no-repeat right 25px center;
+    }
+
+    #app-feature .container {
+        background: url(/Content/images/private/App-taodonhang/2.png) no-repeat left center;
+    }
+
+    #app-feature h4 {
+        margin: 30px 0;
+        font-size: 20px;
+    }
+
+    #more-app-feature .row {
+        padding: 25px 0 86px 50px;
+        background: #006c3b url(/Content/images/private/App-taodonhang/3.png) no-repeat right top 20px;
+        background-size: 49%;
+    }
+
+    #more-app-feature h4 {
+        font-size: 20px;
+    }
+
+    .example-interface {
+        padding: 30px 40px;
+    }
+}
+
+@media(max-width:736px) {
+    #app-banner .container {
+        background: none;
+        padding: 10px 15px 20px;
+    }
+
+    #app-feature .container {
+        padding: 20px 30px;
+        background: url(/Content/images/private/App-taodonhang/2.png) no-repeat right center;
+    }
+
+    #app-feature h4 {
+        font-size: 18px;
+        line-height: 47px;
+    }
+
+    #more-app-feature .row {
+        padding: 25px 0 86px 20px;
+        background-size: 35%;
+    }
+
+    #more-app-feature h4 {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:414px) {
+    #app-banner .container {
+        background: none;
+        padding: 10px 15px 20px;
+    }
+
+    #app-banner .description h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #app-banner .description p {
+        font-size: 10px;
+    }
+
+    #app-banner .download-button a:first-child {
+        margin-right: 0;
+    }
+
+    #app-feature {
+        background: url(/Content/images/private/App-taodonhang/2.png) no-repeat right center;
+    }
+
+        #app-feature .container {
+            background: rgba(0, 0, 0, 0.83);
+        }
+
+        #app-feature h4 {
+            font-size: 16px;
+        }
+
+    #more-app-feature .row {
+        background: #006c3b;
+        padding: 25px 0 40px 20px;
+    }
+
+    #more-app-feature h4 {
+        font-size: 16px;
+        margin: 30px 0;
+    }
+}
+
+/* page-regis */
+.registration-form {
+    padding: 20px 120px;
+}
+
+    .registration-form h2 {
+        text-align: center;
+    }
+
+    .registration-form label span, .registration-form p span {
+        color: #ef5222;
+    }
+
+    .registration-form p {
+        font-style: italic;
+        color: #808080;
+        font-size: 12px;
+    }
+
+    .registration-form .form-horizontal .control-label {
+        text-align: left;
+        padding-left: 25px;
+        color: #737373;
+        font-weight: unset;
+    }
+
+    .registration-form .form-horizontal .form-group {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .registration-form .basicbtn {
+        padding: 5px 50px;
+    }
+
+    .registration-form .form-control {
+        border-radius: 0;
+    }
+
+    .registration-form .btn {
+        border-radius: 0;
+    }
+
+.email-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_mail.png) no-repeat left center;
+}
+
+.matkhau-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_pass.png) no-repeat left center;
+}
+
+.xacnhanmatkhau-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_repass.png) no-repeat left center;
+}
+
+.hoten-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_user.png) no-repeat left center;
+}
+
+.sodienthoai-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_phone.png) no-repeat left center;
+}
+
+.diachi-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_address.png) no-repeat left center;
+}
+
+.thanhpho-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_city.png) no-repeat left center;
+}
+
+.quanhuyen-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_district.png) no-repeat left center;
+}
+
+.phuongxa-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_ward.png) no-repeat left center;
+}
+
+.taikhoannganhang-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_account.png) no-repeat left top 10px;
+}
+
+.mabaove-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_code.png) no-repeat left center;
+}
+
+.tencongty-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_company.png) no-repeat left center;
+}
+
+.dienthoaicodinh-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_landline.png) no-repeat left center;
+}
+
+.gioithieusoluoc-ico {
+    background: url(/Content/images/private/Canhan-dangky/ic_introduce.png) no-repeat left top 10px;
+}
+
+.btnchuyentrang {
+    background: #006c3b;
+    padding: 20px 50px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+    .btnchuyentrang a {
+        color: #fff;
+        text-transform: uppercase;
+        background: url(/Content/images/private/Canhan-dangky/ic_arrow.png) no-repeat right center;
+        font-size: 20px;
+        padding: 10px 60px 10px 0;
+    }
+
+@media (max-width:768px) {
+    .registration-form .form-horizontal .control-label {
+        padding-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .registration-form .form-group .control-label ~ .control-label {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width:414px) {
+    .registration-form {
+        padding: 20px;
+    }
+
+        .registration-form h2 {
+            font-size: 28px;
+        }
+
+    .btnchuyentrang a {
+        font-size: 18px;
+    }
+}
+
+/* bill-create */
+#bill-create label span, #bill-create p span {
+    color: #ef5222;
+}
+
+#bill-create h3 {
+    color: #ef5222;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#bill-create h4 {
+    color: #ef5222;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#bill-create p {
+    color: #808080;
+    font-size: 12px;
+}
+
+#bill-create .form-horizontal .control-label {
+    text-align: left;
+    padding-left: 20px;
+    color: #737373;
+    font-weight: unset;
+    padding-right: 0;
+}
+
+#bill-create .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#bill-create .basicbtn {
+    padding: 5px 50px;
+}
+
+#bill-create .form-control {
+    border-radius: 0;
+}
+
+#bill-create .btn {
+    border-radius: 0;
+}
+
+#bill-create .container > .row > div:first-of-type {
+    padding-left: 0;
+}
+
+#bill-create .container > .row > div ~ div {
+    padding-right: 0;
+}
+
+#bill-create .container > .row > div h4 {
+    margin-top: 30px;
+}
+
+#bill-create .container > .row {
+    margin-bottom: 30px;
+}
+
+#bill-create label ~ a {
+    display: block;
+    padding-left: 20px;
+    font-size: 10px;
+    color: #ef5222;
+    text-decoration: underline;
+}
+
+.tenhanghoa-ico {
+    background: url(/Content/images/private/Taodonhang/ic_order.png) no-repeat left top 10px;
+}
+
+.anhmophong-ico {
+    background: url(/Content/images/private/Taodonhang/ic_photo.png) no-repeat left center;
+}
+
+.videomophong-ico {
+    background: url(/Content/images/private/Taodonhang/ic_video.png) no-repeat left center;
+}
+
+.nhapmagiam-ico {
+    background: url(/Content/images/private/Taodonhang/ic_discount.png) no-repeat left center;
+}
+
+.cuocphitamtinh-ico {
+    background: url(/Content/images/private/Taodonhang/ic_postage.png) no-repeat left center;
+}
+
+/* affix-sidebar */
+.affix-sidebar {
+    padding-right: 0;
+    font-size: small;
+    padding-left: 0;
+}
+
+    .affix-sidebar .sidebar-nav .navbar .navbar-collapse {
+        padding: 0;
+        max-height: none;
+    }
+
+    .affix-sidebar .sidebar-nav .navbar {
+        border-radius: 0;
+        margin-bottom: 0;
+        border: 0;
+    }
+
+        .affix-sidebar .sidebar-nav .navbar ul {
+            float: none;
+            display: block;
+        }
+
+        .affix-sidebar .sidebar-nav .navbar li {
+            float: none;
+            display: block;
+        }
+
+            .affix-sidebar .sidebar-nav .navbar li a, .affix-sidebar .sidebar-nav .navbar li small {
+                padding: 12px 0 12px 20px;
+                color: #777777;
+            }
+
+    .affix-sidebar .sidebar-nav .navbar-nav > li:first-child a {
+        color: #ef5222;
+    }
+
+    .affix-sidebar .sidebar-nav .navbar li a:hover, .affix-sidebar .sidebar-nav .navbar li a:focus {
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    .affix-sidebar .nav-list {
+        padding-left: 20px;
+    }
+
+    .affix-sidebar .sidebar-nav .nav-list li a {
+        padding-left: 20px;
+        background: url(/Content/images/private/donhang-kiemtra/arrow.png) no-repeat left center;
+    }
+
+.dondathang-ico {
+    background: url(/Content/images/private/donhang-kiemtra/ic_order.png) no-repeat left center;
+}
+
+.nhanxet-ico {
+    background: url(/Content/images/private/donhang-kiemtra/comment.png) no-repeat left center;
+}
+
+.huydonhang-ico {
+    background: url(/Content/images/private/donhang-kiemtra/ic_cancelorder.png) no-repeat left center;
+}
+
+.phuongthucthanhtoan-ico {
+    background: url(/Content/images/private/donhang-kiemtra/ic_cash.png) no-repeat left center;
+}
+
+.thongtincanhan-ico {
+    background: url(/Content/images/private/donhang-kiemtra/ic_info.png) no-repeat left center;
+}
+
+.sodiachi-ico {
+    background: url(/Content/images/private/donhang-kiemtra/ic_addressbook.png) no-repeat left center;
+}
+
+.magiamgia-ico {
+    background: url(/Content/images/private/donhang-kiemtra/ic_discount-code.png) no-repeat left center;
+}
+
+.customer-ico {
+    background: url(/Content/images/private/donhang-kiemtra/ic_customer.png) no-repeat left center;
+}
+/* Bill-history */
+.bill-info-table {
+    margin-bottom: 20px;
+}
+
+    .bill-info-table .panel-default > .panel-heading {
+        padding-left: 8px;
+        font-weight: bold;
+    }
+
+    .bill-info-table table tr td:first-child {
+        color: #777777;
+        white-space: nowrap;
+    }
+
+    .bill-info-table table tr td:nth-child(2) {
+        color: #ef5222;
+    }
+
+    .bill-info-table table tr td a {
+        color: #ef5222;
+        text-decoration: underline;
+    }
+
+div#timeline {
+    background-color: #ef5222;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    height: 3px;
+    position: relative;
+}
+
+    div#timeline .inside {
+        position: absolute;
+        height: 4px;
+        background-color: #ef5222;
+        width: 0%;
+        top: 3px;
+        left: 0;
+    }
+
+    div#timeline .dot {
+        z-index: 99;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        top: -14px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+        div#timeline .dot:nth-child(1) {
+            left: 0%;
+        }
+
+        div#timeline .dot:nth-child(2) {
+            left: 50%;
+        }
+
+        div#timeline .dot:nth-child(3) {
+            right: 0%;
+        }
+
+        div#timeline .dot:nth-child(4) {
+            left: 80%;
+            background-color: #20638f;
+        }
+
+        div#timeline .dot:hover {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+            top: -16px;
+        }
+
+        div#timeline .dot date {
+            font-size: 1.1rem;
+            display: block;
+            position: relative;
+            text-align: left;
+            width: 100px;
+            margin-left: -22px;
+        }
+
+
+        div#timeline .dot.active ~ .dot span, div#timeline .dot span {
+            display: inline-block;
+            margin-top: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: #ef5222;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            border: none;
+        }
+
+        div#timeline .dot.active span {
+            box-shadow: 0 0 5px #ef5222;
+            border: 1px solid #FFF;
+        }
+
+        div#timeline .dot.active date {
+            font-weight: bold;
+        }
+
+.bill-tracking tr td:first-child {
+    color: #ef5222;
+}
+
+.bill-tracking tr td:nth-child(2) {
+    color: #777777;
+}
+
+.bill-tracking tbody tr td {
+    border-top: none;
+}
+
+.bill-order-list thead tr th, .bill-order-list tbody tr td {
+    color: #777777;
+    border-bottom: none;
+    vertical-align: middle;
+}
+
+    .bill-order-list thead tr th:nth-child(3) {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .bill-order-list tbody tr td:nth-child(3) {
+        color: #ef5222;
+        text-align: right;
+    }
+
+    .bill-order-list tbody tr td img {
+        height: 100px;
+    }
+
+@media(max-width:768px) {
+    .affix-sidebar .sidebar-nav .navbar ul {
+        padding: 0 15px;
+    }
+
+    .affix-sidebar .sidebar-nav .navbar-nav > li:first-child a {
+        padding-left: 0;
+    }
+}
+
+@media(max-width:736px) {
+    .affix-sidebar .sidebar-nav .navbar ul {
+        padding: 0;
+    }
+
+    .affix-sidebar .navbar-toggle {
+        border: 1px solid #c7c7c7;
+    }
+
+        .affix-sidebar .navbar-toggle .icon-bar {
+            background: #c7c7c7;
+        }
+
+    .affix-sidebar .navbar-nav {
+        margin: 7.5px 0;
+    }
+
+    .affix-sidebar .sidebar-nav .navbar .navbar-collapse {
+        padding: 0 20px;
+    }
+}
+
+/* Bill-check */
+.bill-search-form {
+    padding: 10px;
+}
+
+    .bill-search-form input {
+        border-radius: 0;
+    }
+
+    .bill-search-form .form-horizontal .control-label {
+        text-align: left;
+        color: #777777;
+        font-size: 12px;
+        font-weight: normal;
+        padding-left: 21px;
+    }
+
+.madonhang-ico {
+    background: url(/Content/images/private/donhang-lichsu/ic.ordercode.png) no-repeat left center;
+}
+
+.tensodtnguoinhan-ico {
+    background: url(/Content/images/private/donhang-lichsu/ic_phone.png) no-repeat left center;
+}
+
+.chedogiaohang-ico {
+    background: url(/Content/images/private/donhang-lichsu/ic_truck.png) no-repeat left center;
+}
+
+.ngaytaodonhang-ico {
+    background: url(/Content/images/private/donhang-lichsu/ic_time.png) no-repeat left center;
+}
+
+.from-to-date-form .col-md-6 {
+    margin-top: 13px;
+}
+
+    .from-to-date-form .col-md-6:first-child {
+        padding-left: 0;
+        padding-right: 5px
+    }
+
+    .from-to-date-form .col-md-6:nth-child(2) {
+        padding-right: 0;
+        padding-left: 5px
+    }
+
+.from-to-date-form label {
+    margin-top: 12px;
+}
+
+.from-to-date-form .icon-addon.addon-lg .form-control, .from-to-date-form .icon-addon.addon-lg .btn {
+    padding: 6px 12px;
+    height: 34px;
+    text-transform: uppercase;
+    background: #ef5222;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+
+.from-to-date-form .icon-addon.addon-lg .btn {
+    border-right: 1px solid #fff;
+}
+
+.from-to-date-form .input-group {
+    margin-top: 15px;
+}
+
+.history-bill-list table tr td {
+    text-align: center;
+}
+
+.history-bill-list table td a {
+    color: #ef5222;
+}
+
+.history-bill-list table tbody tr td {
+    border-top: none;
+    border-bottom: none;
+    padding: 20px 8px;
+}
+
+.history-bill-list .pagination {
+    margin-top: 0;
+    float: right;
+}
+
+    .history-bill-list .pagination a {
+        border: none;
+        color: #777777;
+    }
+
+    .history-bill-list .pagination .active a {
+        background: #ef5222;
+        color: #fff;
+    }
+
+@media (max-width:768px) {
+    .from-to-date-form {
+        padding: 0;
+    }
+
+        .from-to-date-form .col-md-6:first-child {
+            padding-right: 0;
+        }
+
+        .from-to-date-form .col-md-6:nth-child(2) {
+            padding-left: 0;
+        }
+}
+
+/* branch-page */
+.branch-banner {
+    margin-top: -20px;
+    text-align: center;
+    background: #f8f8f8;
+    padding-bottom: 60px;
+}
+
+    .branch-banner img {
+        max-width: 100%;
+    }
+
+#branch-page {
+    position: relative;
+    top: -50px;
+}
+
+.branch-search-form {
+    background: #006c3b;
+    padding: 10px 20px 30px;
+}
+
+    .branch-search-form p {
+        padding-left: 15px;
+        color: #fff;
+    }
+
+    .branch-search-form .btn {
+        border-radius: 0;
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+    }
+
+        .branch-search-form .btn:active {
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+    .branch-search-form .form-control {
+        background: transparent;
+    }
+
+    .branch-search-form .caret {
+        color: #fff;
+    }
+
+    .branch-search-form input[type="button"] {
+        background: #fff;
+        color: #006c3b;
+        border-radius: 8px;
+        width: 100%;
+    }
+
+.branch-list-show {
+    width: 25%;
+    float: left;
+    height: 500px;
+    overflow: auto;
+}
+
+    .branch-list-show::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .branch-list-show::-webkit-scrollbar {
+        width: 5px;
+        background-color: #F5F5F5;
+    }
+
+    .branch-list-show::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #ef5222;
+    }
+
+.branch-map {
+    width: 75%;
+    float: left;
+    padding-left: 5px;
+}
+
+    .branch-map #map {
+        height: 500px;
+        width: 100%;
+    }
+
+.one-provine h4 {
+    color: #ef5222;
+    font-size: 16px;
+    padding-left: 10px;
+    background: url(/Content/images/private/hethongchinhanh/ic_list..png) no-repeat left center;
+    margin-top: 20px;
+}
+
+.one-provine ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 10px;
+}
+
+    .one-provine ul li {
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 10px;
+    }
+
+        .one-provine ul li a {
+            color: #777777;
+        }
+
+        .one-provine ul li:before {
+            content: "\00BB";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #ef5222;
+        }
+
+@media(max-width:768px) {
+    .branch-search-form .btn-group {
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:414px) {
+    .branch-list-show, .branch-map {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+
+        .branch-list-show, .branch-map #map {
+            height: 250px;
+        }
+}

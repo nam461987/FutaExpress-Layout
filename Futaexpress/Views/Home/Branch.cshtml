@@ -1,0 +1,142 @@
+﻿@{
+    ViewBag.title = "Hệ thống chi nhánh";
+}
+<div class="branch-banner">
+    <img src="~/Content/images/private/hethongchinhanh/bannerHTCN.png" />
+</div>
+<section id="branch-page">
+    <div class="container">
+        <div class="row">
+            <div class="branch-search-form">
+                <p>Tìm kiếm chi nhánh</p>
+                <div class="col-md-5">
+                    <select class="selectpicker form-control">
+                        <option>Miền Nam</option>
+                        <option>Miền Bắc</option>
+                        <option>Miền Trung</option>
+                    </select>
+                </div>
+                <div class="col-md-5">
+                    <select class="selectpicker form-control">
+                        <option>Miền Nam</option>
+                        <option>Miền Bắc</option>
+                        <option>Miền Trung</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <input type="button" class="btn" value="Tìm kiếm" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="branch-and-map">
+                <div class="branch-list-show">
+                    <div class="one-provine">
+                        <h4>TP Hồ Chí Minh</h4>
+                        <ul>
+                            <li><a href="javascript:checkLocation(['231 Lê hồng Phong P4, Q5',-33.890542,151.274856]);" data-location="[-33.890542,151.274856]">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                        </ul>
+                    </div>
+                    <div class="one-provine">
+                        <h4>Hà Nội</h4>
+                        <ul>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                            <li><a href="javascript:;">231 Lê Hồng Phong P4, Q5, TPHCM</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="branch-map">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section scripts{
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyCbeGMR-oUvWhMntnFzN84md_G1lIyQthM"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+        var locations = [
+            ['231 Lê hồng Phong P4, Q5', -33.890542, 151.274856, 4],
+            ['80 Trần Hưng Đạo', -33.923036, 151.259052, 5],
+            ['113 Nguyễn Trãi', -34.028249, 151.157507, 3],
+            ['111 Lê Hồng Phong', -33.80010128657071, 151.28747820854187, 2],
+            ['220 Lê Hồng Phong', -33.950198, 151.259302, 1]
+        ];
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: new google.maps.LatLng(-33.92, 151.25),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                icon: "/Content/images/private/hethongchinhanh/ic_address.png",
+                map: map
+            });
+
+            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+
+        function checkLocation(data) {
+            crollToMap();
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 16,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            var infowindow = new google.maps.InfoWindow();
+
+            var markers, i;
+
+            for (i = 0; i < locations.length; i++) {
+                markers = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    icon:"/Content/images/private/hethongchinhanh/ic_address.png",
+                    map: map
+                });
+                google.maps.event.addListener(markers, 'click', (function (markers, i) {
+                    return function () {
+                        infowindow.setContent(locations[i][0]);
+                        infowindow.open(map, markers);
+                    }
+                })(markers, i));
+            }
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(data[1], data[2]),
+                icon: "/Content/images/private/hethongchinhanh/ic_address.png",
+                map: map
+            });
+            map.panTo(marker.getPosition());
+            infowindow.setContent(data[0]);
+            infowindow.open(map, marker);
+        }
+        function crollToMap() {
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 1000);
+        }
+    </script>
+}

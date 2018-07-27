@@ -1,0 +1,432 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section styles{
+    <link href="/Content/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/Content/css/slider.css" rel="stylesheet" />
+}
+<!-- Page Content -->
+<section id="body-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="login-block">
+                        <h3>Đăng nhập</h3>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                    <div class="icon-addon addon-lg">
+                                        <input type="text" placeholder="Email hoặc số điện thoại" class="form-control" id="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                                    <div class="icon-addon addon-lg">
+                                        <input type="password" placeholder="Mật khẩu" class="form-control" id="pw">
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="button" class="basicbtn btn-main1" value="Đăng nhập" />
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <a href="/" class="text-main1 underline-main1">Quên mật khẩu?</a>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <a href="@Url.RouteUrl("Personal")" class="text-main2 underline-main2">Tạo tài khoản</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <section id="banner" class="row">
+                    <div class="container-fluid">
+                        <div class="slider-wrap">
+                            <div id="carousel-example-generic" class="carousel slide vertical" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+                                        <p>FUTA Express khai trương văn phòng mới</p>
+                                    </li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1">
+                                        <p>Khuyến mãi cũng FUTA Express</p>
+                                    </li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2">
+                                        <p>Tải app nhận ưu đãi</p>
+                                    </li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <div class="img-wrap">
+                                            <img src="http://www.letsgohimachal.com/wp-content/themes/travel-site/img/slider-1.jpg" class="img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-wrap">
+                                            <img src="http://www.letsgohimachal.com/wp-content/themes/travel-site/img/slider-1.jpg" class="img-responsive">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="img-wrap">
+                                            <img src="http://www.letsgohimachal.com/wp-content/themes/travel-site/img/slider-1.jpg" class="img-responsive">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="express-button">
+    <div class="container">
+        <div class="row">
+            <div class="create-btn byweb-ico">
+                <a href="@Url.RouteUrl("Bill_Create")">Tạo đơn hàng</a>
+            </div>
+            <div class="create-btn byapp-ico">
+                <a href="@Url.RouteUrl("AppLandingPage")">Tạo đơn hàng nhanh qua App FUTA Express</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="user-interface">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="bill-find">
+                        <h4 class="bill-find-ico">Tra cứu đơn hàng</h4>
+                        <div class="input-group icon-addon addon-lg">
+                            <input type="text" class="form-control" placeholder="Nhập mã đơn hàng cần tra cứu" id="txtSearch" />
+                            <div class="input-group-btn">
+                                <button class="btn" type="submit">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="price-table">
+                        <h4 class="price-table-ico text-underline">Bảng báo giá</h4><span>(pdf)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="online-pay">
+                        <h4 class="online-pay-ico text-underline">Thanh toán cước phí online</h4>
+                        <div class="col-md-2 col-xs-2 col-md-offset-1 col-xs-offset-2 text-center">
+                            <img src="/Content/images/private/home/ic_cash.master.png" />
+                            <p>Master</p>
+                        </div>
+                        <div class="col-md-2 col-xs-2 text-center">
+                            <img src="/Content/images/private/home/ic_cash.visa.png" />
+                            <p>Visa</p>
+                        </div>
+                        <div class="col-md-2 col-xs-2 text-center">
+                            <img src="/Content/images/private/home/ic_cash.paypal.png" />
+                            <p>Paypal</p>
+                        </div>
+                        <div class="col-md-2 col-xs-2 text-center">
+                            <img src="/Content/images/private/home/ic_cash.atm.png" />
+                            <p>ATM</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="branch-list">
+                        <h4 class="branch-ico">Hệ thống chi nhánh</h4>
+                        <h3>FUTA Express miền Bắc</h3>
+                        <h3>FUTA Express miền Trung</h3>
+                        <h3>FUTA Express miền Nam</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="fee-cal">
+                        <h4 class="fee-cal-ico">Tính cước phí nhanh</h4>
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="name" class="control-label col-md-4 noinhanhang-ico">Nơi nhận hàng</label>
+                                <div class="col-md-8">
+                                    <select class="selectpicker form-control">
+                                        <option>-- Thành phố --</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="control-label col-md-4 noigiaohang-ico">Nơi giao hàng</label>
+                                <div class="col-md-8">
+                                    <select class="selectpicker form-control">
+                                        <option>-- Thành phố --</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="control-label col-md-4 loaihinhdichvu-ico">Loại hình dịch vụ</label>
+                                <div class="col-md-8">
+                                    <select class="selectpicker form-control">
+                                        <option>-- Thành phố --</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="control-label col-md-4 loaihanghoa-ico">Loại hàng hóa</label>
+                                <div class="col-md-8">
+                                    <select class="selectpicker form-control">
+                                        <option>-- Thành phố --</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="control-label col-md-4 khoiluong-ico">Khối lượng (g)</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="address" placeholder="Enter address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="control-label col-md-4 kichthuoc-ico">Kích thước (cm)</label>
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Dài (cm)">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Rộng (cm)">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Cao (cm)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" name="radio"> Đóng gói bao bì
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" name="radio"> Giao nhận tận nơi
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" name="radio" checked="checked"> Từ văn phòng gốc
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-4 col-md-offset-4">
+                                    <input type="text" class="form-control" placeholder="Nhập Km từ chi nhánh gần nhất">
+                                </div>
+                            </div>
+                            <div class="col-md-offset-4 col-md-5">
+                                <button type="submit" class="basicbtn btn-main1">Tính phí nhanh</button>
+                            </div>
+                            <div class="clearfix"></div>
+                            <p>
+                                <span class="text-main1">Lưu ý:</span> Chi phí ước tính áp dụng trên bảng giá chuẩn. Giá trên có thể thay đổi.
+                                Quý khách vui lòng liên hệ với chi nhánh hoặc tổng đài để được tư vấn.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@Html.Partial("_HotlineBannerPartial")
+
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="about-us-description">
+                <h3 class="text-main1 middle-line text-uppercase"><span>Về chúng tôi</span></h3>
+                <p>
+                    Trải qua hơn 10 năm hoạt động, năm 2012 FUTA Express vinh dự là Công ty vận tải hành khách và hàng hóa đầu tiên
+                    được Bộ Thông Tin và Truyền Thông cấp giấy phép hoạt động.
+                </p>
+                <a href="/" class="text-main1">Tìm hiểu thêm</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="choose-us">
+    <div class="container">
+        <div class="row">
+            <div class="choose-us-description">
+                <h3 class="text-main1 middle-line text-uppercase"><span>Lý do chọn chúng tôi</span></h3>
+                <h4 class="text-capitalize">Chất lượng là danh dự</h4>
+                <p>
+                    Trải qua hơn 10 năm hoạt động, năm 2012 FUTA Express vinh dự là Công ty vận tải hành khách và hàng hóa đầu tiên
+                    được Bộ Thông Tin và Truyền Thông cấp giấy phép hoạt động.
+                </p>
+            </div>
+            <div class="col-md-12">
+                <div class="reason-list">
+                    <div class="hailong-ico">
+                        <h4 class="text-main1">100% sự hài lòng của khách hàng</h4>
+                        <p>
+                            Dịch vụ giao hàng của Phương Trang rất hữu ích và tiện lợi mỗi khi cần chuyển hàng về quê hoặc ngược lại trong
+                            thời gian ngắn.
+                        </p>
+                        <div class="combine-line"></div>
+                    </div>
+                    <div class="phaichang-ico">
+                        <h4 class="text-main1">Giá cả phải chăng</h4>
+                        <p>
+                            Dịch vụ giao hàng của Phương Trang rất hữu ích và tiện lợi mỗi khi cần chuyển hàng về quê hoặc ngược lại trong
+                            thời gian ngắn.
+                        </p>
+                        <div class="combine-line"></div>
+                    </div>
+                    <div class="phanphoi-ico">
+                        <h4 class="text-main1">Phân phối toàn quốc</h4>
+                        <p>
+                            Dịch vụ giao hàng của Phương Trang rất hữu ích và tiện lợi mỗi khi cần chuyển hàng về quê hoặc ngược lại trong
+                            thời gian ngắn.
+                        </p>
+                        <div class="combine-line"></div>
+                    </div>
+                    <div class="phuongtien-ico">
+                        <h4 class="text-main1">Phương tiện hiện đại</h4>
+                        <p>
+                            Dịch vụ giao hàng của Phương Trang rất hữu ích và tiện lợi mỗi khi cần chuyển hàng về quê hoặc ngược lại trong
+                            thời gian ngắn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="about-us-description">
+                <h3 class="text-main1 middle-line text-uppercase"><span>Dịch vụ của FUTA Express</span></h3>
+                <p>
+                    Trải qua hơn 10 năm hoạt động, năm 2012 FUTA Express vinh dự là Công ty vận tải hành khách và hàng hóa đầu tiên
+                    được Bộ Thông Tin và Truyền Thông cấp giấy phép hoạt động.
+                </p>
+            </div>
+            <div class="service-list">
+                <div class="col-md-4 col-sm-6">
+                    <div class="hoatoc-ico">
+                        <h5>Dịch vụ hỏa tốc FUTA Express</h5>
+                        <a>Tìm hiểu thêm <span class="text-main1">&#187;</span></a>
+                    </div>
+                    <div class="chuyennhanh-ico">
+                        <h5>Dịch vụ hỏa tốc FUTA Express</h5>
+                        <a>Tìm hiểu thêm <span class="text-main1">&#187;</span></a>
+                    </div>
+                    <div class="chuyentietkiem-ico">
+                        <h5>Dịch vụ hỏa tốc FUTA Express</h5>
+                        <a>Tìm hiểu thêm <span class="text-main1">&#187;</span></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-4 col-sm-6">
+                    <div class="hanghoa-ico">
+                        <h5>Dịch vụ hỏa tốc FUTA Express</h5>
+                        <a>Tìm hiểu thêm <span class="text-main1">&#187;</span></a>
+                    </div>
+                    <div class="thanhtoansau-ico">
+                        <h5>Dịch vụ hỏa tốc FUTA Express</h5>
+                        <a>Tìm hiểu thêm <span class="text-main1">&#187;</span></a>
+                    </div>
+                    <div class="thanhtoannhan-ico">
+                        <h5>Dịch vụ hỏa tốc FUTA Express</h5>
+                        <a>Tìm hiểu thêm <span class="text-main1">&#187;</span></a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="news-list">
+    <div class="container">
+        <div class="row">
+            <div class="about-us-description">
+                <h3 class="text-main1 middle-line text-uppercase"><span>Tin tức FUTA Express</span></h3>
+            </div>
+            <div class="owl-carousel owl-theme">
+                <article class="news-entry">
+                    <h4>Tuyển dụng tài xế xe chở hàng</h4>
+                    <img src="/Content/images/private/home/1.png" />
+                    <p>Công ty CP dịch vụ chuyển phát nhanh Phương Trang có nhu cầu tuyển dụng...</p>
+                    <a href="/">Xem thêm <span class="text-main1">&#187;</span></a>
+                </article>
+                <article class="news-entry">
+                    <h4>Tuyển dụng tài xế xe chở hàng</h4>
+                    <img src="/Content/images/private/home/3.png" />
+                    <p>Công ty CP dịch vụ chuyển phát nhanh Phương Trang có nhu cầu tuyển dụng...</p>
+                    <a href="/">Xem thêm <span class="text-main1">&#187;</span></a>
+                </article>
+                <article class="news-entry">
+                    <h4>Tuyển dụng tài xế xe chở hàng</h4>
+                    <img src="~/Content/images/private/home/4.jpg" />
+                    <p>Công ty CP dịch vụ chuyển phát nhanh Phương Trang có nhu cầu tuyển dụng...</p>
+                    <a href="/">Xem thêm <span class="text-main1">&#187;</span></a>
+                </article>
+                <article class="news-entry">
+                    <h4>Tuyển dụng tài xế xe chở hàng</h4>
+                    <img src="~/Content/images/private/home/4.jpg" />
+                    <p>Công ty CP dịch vụ chuyển phát nhanh Phương Trang có nhu cầu tuyển dụng...</p>
+                    <a href="/">Xem thêm <span class="text-main1">&#187;</span></a>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.container -->
+
+@section scripts{
+    <script src="/Content/js/owl.carousel.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.owl-carousel').owlCarousel({
+                autoplay: true,
+                items: 3,
+                loop: true,
+                nav: true,
+                navText: ["<div class='custom-nav pre-carousel'></div>", "<div class='custom-nav next-carousel'></div>"],
+                dots: false,
+                margin: 10,
+                responsive: {
+                    414: {
+                        items: 1
+                    },
+                    736: {
+                        items: 2
+                    },
+                    768: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
+}
